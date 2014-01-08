@@ -222,20 +222,21 @@ public abstract class PortalLayoutConnector extends AbstractLayoutConnector impl
         this.view = initView();
         this.dropController = initDropController();
         commonDragController.registerDropController(dropController);
-        view.asWidget().addAttachHandler(new AttachEvent.Handler() {
-            @Override
-            public void onAttachOrDetach(AttachEvent event) {
-                getLayoutManager().addElementResizeListener(((ComponentConnector)getParent()).getWidget().getElement(), new ElementResizeListener() {
-                    @Override
-                    public void onElementResize(ElementResizeEvent e) {
-                        LayoutManager lm = e.getLayoutManager();
-                        if (lm.getOuterHeight(e.getElement()) > lm.getOuterHeight(getWidget().getElement())) {
-                            //getWidget().getElement().getStyle().setProperty("height", lm.getOuterHeight(e.getElement()) + "px");
-                        }
-                    }
-                });
-            }
-        });
+        // The code block commented out, because it causes an NPE on Detach. It seems that it does not do anything useful anywyas: note the double-commented line.
+//        view.asWidget().addAttachHandler(new AttachEvent.Handler() {
+//            @Override
+//            public void onAttachOrDetach(AttachEvent event) {
+//                getLayoutManager().addElementResizeListener(((ComponentConnector)getParent()).getWidget().getElement(), new ElementResizeListener() {
+//                    @Override
+//                    public void onElementResize(ElementResizeEvent e) {
+//                        LayoutManager lm = e.getLayoutManager();
+//                        if (lm.getOuterHeight(e.getElement()) > lm.getOuterHeight(getWidget().getElement())) {
+//                            //getWidget().getElement().getStyle().setProperty("height", lm.getOuterHeight(e.getElement()) + "px");
+//                        }
+//                    }
+//                });
+//            }
+//        });
         return view.asWidget();
     }
 
