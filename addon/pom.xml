@@ -4,15 +4,15 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.vaadin.addons</groupId>
 	<artifactId>PortalLayout</artifactId>
-	<version>2.0.alpha5</version>
+	<version>2.0.alpha5.v7.1</version>
 	<packaging>jar</packaging>
 	<name>PortalLayout</name>
 	<description>portal-layout add-on</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<vaadin.version>7.1.6</vaadin.version>
-		<vaadin.plugin.version>7.1.6</vaadin.plugin.version>
+		<vaadin.version>7.1.14</vaadin.version>
+		<vaadin.plugin.version>7.1.14</vaadin.plugin.version>
 	</properties>
 
 	<repositories>
@@ -70,7 +70,7 @@
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>servlet-api</artifactId>
-			<version>2.4</version>
+			<version>2.5</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
@@ -82,7 +82,7 @@
 		<dependency>
 			<groupId> com.allen-sauer.gwt.dnd</groupId>
 			<artifactId>gwt-dnd</artifactId>
-			<version>3.2.0</version>
+			<version>3.3.1</version>
 		</dependency>
 	</dependencies>
 
